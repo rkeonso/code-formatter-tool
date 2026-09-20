@@ -20,7 +20,8 @@ export default function App() {
   setErrorDetails(null); // Clear previous errors
 
   try {
-    const response = await fetch('http://localhost:5001/api/format', {
+    const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+    const response = await fetch(`${API_BASE_URL}/api/format`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ code, config }),
