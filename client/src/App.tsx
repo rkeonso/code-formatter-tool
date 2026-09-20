@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ConfigPanel } from './components/ConfigPanel';
-import { type FormattingConfig, type FormatApiResponse } from './types/formatter';
+import { type FormattingConfig } from './types/formatter';
 import Editor from '@monaco-editor/react';
 
 export default function App() {
